@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content" />
+    <title>Curious Explorer</title>
+    
+    <!-- Fonts & Base Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --cyber-dark: #050a14;
+        --cyber-panel: #0a1120;
+        --cyber-accent: #00f0ff;
+        --cyber-dim: #00f0ff20;
+        --cyber-text: #e2e8f0;
+        --cyber-subtext: #94a3b8;
+      }
+      body {
+        background-color: var(--cyber-dark);
+        color: var(--cyber-text);
+      }
+      /* Custom scrollbar for cyberpunk feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--cyber-panel);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--cyber-accent);
+      }
+
+      /* Polyfill for custom colors if Tailwind fails or is blocked by CSP */
+      .bg-cyber-dark { background-color: var(--cyber-dark); }
+      .bg-cyber-panel { background-color: var(--cyber-panel); }
+      .text-cyber-accent { color: var(--cyber-accent); }
+      .text-cyber-subtext { color: var(--cyber-subtext); }
+      .text-cyber-text { color: var(--cyber-text); }
+      .border-cyber-dim { border-color: var(--cyber-dim); }
+      .border-cyber-accent { border-color: var(--cyber-accent); }
+      .bg-cyber-dim { background-color: var(--cyber-dim); }
+      .bg-cyber-accent { background-color: var(--cyber-accent); }
+      .text-cyber-dim { color: var(--cyber-dim); }
+    </style>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cyber: {
+                dark: '#050a14',
+                panel: '#0a1120',
+                accent: '#00f0ff',
+                dim: '#00f0ff20',
+                text: '#e2e8f0',
+                subtext: '#94a3b8'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Roboto Mono', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Import Map -->
+    <script type="importmap">
+    {
+      "imports": {
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+        "react/": "https://aistudiocdn.com/react@^19.2.1/",
+        "react": "https://aistudiocdn.com/react@^19.2.1",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+        "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.1/client",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+        "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25"
+      }
+    }
+    </script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "Curious Explorer",
+  "description": "A recursive visual encyclopedia allowing users to explode objects into components using AI generation.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
